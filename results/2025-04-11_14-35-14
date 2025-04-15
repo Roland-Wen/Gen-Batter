@@ -1,0 +1,364 @@
+2025-04-11 21:36:45,351 - INFO - No valid cache found for 2024. Fetching from pybaseball...
+2025-04-11 21:36:45,353 - INFO - Fetching Statcast data for 2024 from 2024-03-01 to 2024-11-30
+2025-04-11 21:36:45,355 - INFO -   Fetching chunk: 2024-03-01 to 2024-03-07
+2025-04-11 21:36:47,364 - INFO -   Fetching chunk: 2024-03-08 to 2024-03-14
+2025-04-11 21:36:49,370 - INFO -   Fetching chunk: 2024-03-15 to 2024-03-21
+2025-04-11 21:36:58,624 - INFO -   Fetched 20698 pitches.
+2025-04-11 21:37:00,625 - INFO -   Fetching chunk: 2024-03-22 to 2024-03-28
+2025-04-11 21:37:26,953 - INFO - Loading cached raw data for 2023 from dataset/raw_statcast_2023.parquet
+2025-04-11 21:37:28,838 - INFO - Loaded 771057 pitches from cache for 2023.
+2025-04-11 21:38:05,487 - INFO - Preprocessing data. Initial shape: (771057, 113)
+2025-04-11 21:38:07,009 - INFO - Shape after filtering descriptions: (751775, 113)
+2025-04-11 21:38:07,239 - INFO - Target variables created/processed.
+2025-04-11 21:38:07,393 - INFO - Shape after feature selection: (751775, 26)
+2025-04-11 21:38:07,410 - INFO - Imputed NaNs in numerical feature 'release_speed' with median (90.00).
+2025-04-11 21:38:07,421 - INFO - Imputed NaNs in numerical feature 'release_pos_x' with median (-1.53).
+2025-04-11 21:38:07,433 - INFO - Imputed NaNs in numerical feature 'release_pos_z' with median (5.81).
+2025-04-11 21:38:07,443 - INFO - Imputed NaNs in numerical feature 'release_extension' with median (6.40).
+2025-04-11 21:38:07,456 - INFO - Imputed NaNs in numerical feature 'release_spin_rate' with median (2276.00).
+2025-04-11 21:38:07,467 - INFO - Imputed NaNs in numerical feature 'spin_axis' with median (201.00).
+2025-04-11 21:38:07,480 - INFO - Imputed NaNs in numerical feature 'pfx_x' with median (-0.20).
+2025-04-11 21:38:07,494 - INFO - Imputed NaNs in numerical feature 'pfx_z' with median (0.66).
+2025-04-11 21:38:08,700 - INFO - Preprocessing complete. Final shape: (751775, 27)
+2025-04-11 21:38:08,701 - INFO - Final Numerical Features: ['release_speed', 'release_pos_x', 'release_pos_z', 'release_extension', 'release_spin_rate', 'spin_axis', 'pfx_x', 'pfx_z', 'inning', 'outs_when_up', 'score_diff', 'balls', 'strikes', 'on_1b_flag', 'on_2b_flag', 'on_3b_flag']
+2025-04-11 21:38:08,702 - INFO - Final Categorical Features: ['pitch_type', 'stand', 'p_throws', 'inning_topbot_numeric']
+2025-04-11 21:56:00,128 - INFO - Splitting combined data based on 2666 unique games.
+2025-04-11 21:56:37,093 - INFO - Splitting combined data based on 2666 unique games.
+2025-04-11 21:56:52,094 - INFO - Splitting combined data based on 2666 unique games.
+2025-04-11 21:57:24,575 - INFO - Splitting combined data based on 2666 unique games.
+2025-04-11 21:57:24,878 - INFO - Data split: Train=562519, Val=113631, Test=75625
+2025-04-11 21:59:30,076 - INFO - Final Numerical Features for Training: ['release_speed', 'release_pos_x', 'release_pos_z', 'release_extension', 'release_spin_rate', 'spin_axis', 'pfx_x', 'pfx_z', 'inning', 'outs_when_up', 'score_diff', 'balls', 'strikes', 'on_1b_flag', 'on_2b_flag', 'on_3b_flag']
+2025-04-11 21:59:30,078 - INFO - Final Categorical Features for Training: ['pitch_type', 'stand', 'p_throws', 'inning_topbot_numeric']
+2025-04-11 21:59:33,186 - INFO - Final Numerical Features for Training: ['release_speed', 'release_pos_x', 'release_pos_z', 'release_extension', 'release_spin_rate', 'spin_axis', 'pfx_x', 'pfx_z', 'inning', 'outs_when_up', 'score_diff', 'balls', 'strikes', 'on_1b_flag', 'on_2b_flag', 'on_3b_flag']
+2025-04-11 21:59:33,188 - INFO - Final Categorical Features for Training: ['pitch_type', 'stand', 'p_throws', 'inning_topbot_numeric']
+2025-04-11 22:00:09,411 - INFO - Final Numerical Features for Training: ['release_speed', 'release_pos_x', 'release_pos_z', 'release_extension', 'release_spin_rate', 'spin_axis', 'pfx_x', 'pfx_z', 'inning', 'outs_when_up', 'score_diff', 'balls', 'strikes', 'on_1b_flag', 'on_2b_flag', 'on_3b_flag']
+2025-04-11 22:00:09,413 - INFO - Final Categorical Features for Training: ['pitch_type', 'stand', 'p_throws', 'inning_topbot_numeric']
+2025-04-11 22:01:37,798 - INFO - Creating Training Dataset...
+2025-04-11 22:01:37,801 - INFO - Fitting StandardScaler on numerical features...
+2025-04-11 22:01:38,361 - INFO - Applied StandardScaler.
+2025-04-11 22:01:38,362 - INFO - Creating categorical mappings...
+2025-04-11 22:01:38,389 - INFO -   Mapped 'pitch_type' (17 unique values).
+2025-04-11 22:01:38,414 - INFO -   Mapped 'stand' (2 unique values).
+2025-04-11 22:01:38,439 - INFO -   Mapped 'p_throws' (2 unique values).
+2025-04-11 22:01:38,574 - INFO -   Mapped 'inning_topbot_numeric' (2 unique values).
+2025-04-11 22:01:38,599 - INFO - Applied mapping for 'pitch_type'.
+2025-04-11 22:01:38,626 - INFO - Applied mapping for 'stand'.
+2025-04-11 22:01:38,650 - INFO - Applied mapping for 'p_throws'.
+2025-04-11 22:01:38,791 - INFO - Applied mapping for 'inning_topbot_numeric'.
+2025-04-11 22:01:38,842 - INFO - Grouping data by at-bat and creating sequence indices...
+2025-04-11 22:01:50,812 - INFO - Created 562519 sequences from 150605 at-bats (562519 total pitches).
+2025-04-11 22:01:50,816 - INFO - Creating Validation Dataset...
+2025-04-11 22:01:50,817 - INFO - Using pre-fitted StandardScaler.
+2025-04-11 22:01:50,896 - INFO - Applied StandardScaler.
+2025-04-11 22:01:50,897 - INFO - Using pre-defined categorical mappings.
+2025-04-11 22:01:50,904 - INFO - Applied mapping for 'pitch_type'.
+2025-04-11 22:01:50,911 - INFO - Applied mapping for 'stand'.
+2025-04-11 22:01:50,918 - INFO - Applied mapping for 'p_throws'.
+2025-04-11 22:01:50,948 - INFO - Applied mapping for 'inning_topbot_numeric'.
+2025-04-11 22:01:50,962 - INFO - Grouping data by at-bat and creating sequence indices...
+2025-04-11 22:01:53,412 - INFO - Created 113631 sequences from 30429 at-bats (113631 total pitches).
+2025-04-11 22:01:53,414 - INFO - Creating DataLoaders with batch_size=32, num_workers=0...
+2025-04-11 22:01:53,415 - INFO - DataLoaders created.
+2025-04-11 22:23:25,012 - INFO - Creating Training Dataset...
+2025-04-11 22:23:25,015 - INFO - Fitting StandardScaler on numerical features...
+2025-04-11 22:23:25,287 - INFO - Applied StandardScaler.
+2025-04-11 22:23:25,288 - INFO - Creating categorical mappings...
+2025-04-11 22:23:25,323 - INFO -   Mapped 'pitch_type' (17 unique values).
+2025-04-11 22:23:25,357 - INFO -   Mapped 'stand' (2 unique values).
+2025-04-11 22:23:25,392 - INFO -   Mapped 'p_throws' (2 unique values).
+2025-04-11 22:23:25,533 - INFO -   Mapped 'inning_topbot_numeric' (2 unique values).
+2025-04-11 22:23:25,557 - INFO - Applied mapping for 'pitch_type'.
+2025-04-11 22:23:25,584 - INFO - Applied mapping for 'stand'.
+2025-04-11 22:23:25,609 - INFO - Applied mapping for 'p_throws'.
+2025-04-11 22:23:25,756 - INFO - Applied mapping for 'inning_topbot_numeric'.
+2025-04-11 22:23:25,813 - INFO - Grouping data by at-bat and creating sequence indices...
+2025-04-11 22:23:37,904 - INFO - Created 562519 sequences from 150605 at-bats (562519 total pitches).
+2025-04-11 22:23:37,908 - INFO - Creating Validation Dataset...
+2025-04-11 22:23:37,909 - INFO - Using pre-fitted StandardScaler.
+2025-04-11 22:23:37,938 - INFO - Applied StandardScaler.
+2025-04-11 22:23:37,939 - INFO - Using pre-defined categorical mappings.
+2025-04-11 22:23:37,946 - INFO - Applied mapping for 'pitch_type'.
+2025-04-11 22:23:37,953 - INFO - Applied mapping for 'stand'.
+2025-04-11 22:23:37,960 - INFO - Applied mapping for 'p_throws'.
+2025-04-11 22:23:37,991 - INFO - Applied mapping for 'inning_topbot_numeric'.
+2025-04-11 22:23:38,007 - INFO - Grouping data by at-bat and creating sequence indices...
+2025-04-11 22:23:40,268 - INFO - Created 113631 sequences from 30429 at-bats (113631 total pitches).
+2025-04-11 22:23:40,270 - INFO - Creating DataLoaders with batch_size=32, num_workers=0...
+2025-04-11 22:23:40,271 - INFO - DataLoaders created.
+2025-04-11 22:25:04,598 - INFO - Creating Training Dataset...
+2025-04-11 22:25:04,601 - INFO - Fitting StandardScaler on numerical features...
+2025-04-11 22:25:04,942 - INFO - Applied StandardScaler.
+2025-04-11 22:25:04,943 - INFO - Creating categorical mappings...
+2025-04-11 22:25:04,978 - INFO -   Mapped 'pitch_type' (17 unique values).
+2025-04-11 22:25:05,013 - INFO -   Mapped 'stand' (2 unique values).
+2025-04-11 22:25:05,048 - INFO -   Mapped 'p_throws' (2 unique values).
+2025-04-11 22:25:05,205 - INFO -   Mapped 'inning_topbot_numeric' (2 unique values).
+2025-04-11 22:25:05,228 - INFO - Applied mapping for 'pitch_type'.
+2025-04-11 22:25:05,254 - INFO - Applied mapping for 'stand'.
+2025-04-11 22:25:05,279 - INFO - Applied mapping for 'p_throws'.
+2025-04-11 22:25:05,427 - INFO - Applied mapping for 'inning_topbot_numeric'.
+2025-04-11 22:25:05,506 - INFO - Grouping data by at-bat and creating sequence indices...
+2025-04-11 22:25:16,956 - INFO - Created 562519 sequences from 150605 at-bats (562519 total pitches).
+2025-04-11 22:25:16,959 - INFO - Creating Validation Dataset...
+2025-04-11 22:25:16,960 - INFO - Using pre-fitted StandardScaler.
+2025-04-11 22:25:16,994 - INFO - Applied StandardScaler.
+2025-04-11 22:25:16,995 - INFO - Using pre-defined categorical mappings.
+2025-04-11 22:25:17,002 - INFO - Applied mapping for 'pitch_type'.
+2025-04-11 22:25:17,009 - INFO - Applied mapping for 'stand'.
+2025-04-11 22:25:17,016 - INFO - Applied mapping for 'p_throws'.
+2025-04-11 22:25:17,050 - INFO - Applied mapping for 'inning_topbot_numeric'.
+2025-04-11 22:25:17,065 - INFO - Grouping data by at-bat and creating sequence indices...
+2025-04-11 22:25:19,428 - INFO - Created 113631 sequences from 30429 at-bats (113631 total pitches).
+2025-04-11 22:25:19,429 - INFO - Creating DataLoaders with batch_size=32, num_workers=0...
+2025-04-11 22:25:19,430 - INFO - DataLoaders created.
+2025-04-11 22:30:17,887 - INFO - Creating Training Dataset...
+2025-04-11 22:30:17,890 - INFO - Fitting StandardScaler on numerical features...
+2025-04-11 22:30:18,234 - INFO - Applied StandardScaler.
+2025-04-11 22:30:18,235 - INFO - Creating categorical mappings...
+2025-04-11 22:30:18,272 - INFO -   Mapped 'pitch_type' (17 unique values).
+2025-04-11 22:30:18,307 - INFO -   Mapped 'stand' (2 unique values).
+2025-04-11 22:30:18,342 - INFO -   Mapped 'p_throws' (2 unique values).
+2025-04-11 22:30:18,497 - INFO -   Mapped 'inning_topbot_numeric' (2 unique values).
+2025-04-11 22:30:18,521 - INFO - Applied mapping for 'pitch_type'.
+2025-04-11 22:30:18,547 - INFO - Applied mapping for 'stand'.
+2025-04-11 22:30:18,571 - INFO - Applied mapping for 'p_throws'.
+2025-04-11 22:30:18,719 - INFO - Applied mapping for 'inning_topbot_numeric'.
+2025-04-11 22:30:18,798 - INFO - Grouping data by at-bat and creating sequence indices...
+2025-04-11 22:30:30,737 - INFO - Created 562519 sequences from 150605 at-bats (562519 total pitches).
+2025-04-11 22:30:30,740 - INFO - Creating Validation Dataset...
+2025-04-11 22:30:30,741 - INFO - Using pre-fitted StandardScaler.
+2025-04-11 22:30:30,766 - INFO - Applied StandardScaler.
+2025-04-11 22:30:30,767 - INFO - Using pre-defined categorical mappings.
+2025-04-11 22:30:30,774 - INFO - Applied mapping for 'pitch_type'.
+2025-04-11 22:30:30,781 - INFO - Applied mapping for 'stand'.
+2025-04-11 22:30:30,787 - INFO - Applied mapping for 'p_throws'.
+2025-04-11 22:30:30,818 - INFO - Applied mapping for 'inning_topbot_numeric'.
+2025-04-11 22:30:30,833 - INFO - Grouping data by at-bat and creating sequence indices...
+2025-04-11 22:30:33,137 - INFO - Created 113631 sequences from 30429 at-bats (113631 total pitches).
+2025-04-11 22:30:33,139 - INFO - Creating DataLoaders with batch_size=32, num_workers=0...
+2025-04-11 22:30:33,140 - INFO - DataLoaders created.
+2025-04-11 22:43:17,768 - INFO - Starting training orchestration with caching...
+2025-04-11 22:43:17,771 - INFO - Using CUDA device.
+2025-04-11 22:43:17,772 - INFO - 
+--- Processing Year: 2022 ---
+2025-04-11 22:43:17,773 - INFO - Loading cached processed data for 2022 from dataset/processed_statcast_2022.parquet
+2025-04-11 22:43:18,154 - INFO - Loaded 754158 processed pitches from cache for 2022.
+2025-04-11 22:43:18,156 - INFO - 
+--- Processing Year: 2023 ---
+2025-04-11 22:43:18,157 - INFO - Loading cached processed data for 2023 from dataset/processed_statcast_2023.parquet
+2025-04-11 22:43:18,550 - INFO - Loaded 751775 processed pitches from cache for 2023.
+2025-04-11 22:43:18,551 - INFO - Concatenating processed data from all years...
+2025-04-11 22:43:18,767 - INFO - Total processed pitches combined: 1505933
+2025-04-11 22:43:18,768 - INFO - Final Numerical Features for Training: ['release_speed', 'release_pos_x', 'release_pos_z', 'release_extension', 'release_spin_rate', 'spin_axis', 'pfx_x', 'pfx_z', 'inning', 'outs_when_up', 'score_diff', 'balls', 'strikes', 'on_1b_flag', 'on_2b_flag', 'on_3b_flag']
+2025-04-11 22:43:18,769 - INFO - Final Categorical Features for Training: ['pitch_type', 'stand', 'p_throws', 'inning_topbot_numeric']
+2025-04-11 22:43:18,797 - INFO - Splitting combined data based on 5404 unique games.
+2025-04-11 22:43:19,393 - INFO - Data split: Train=1129031, Val=226181, Test=150721
+2025-04-11 22:43:19,394 - INFO - Creating Training Dataset...
+2025-04-11 22:43:19,395 - INFO - Fitting StandardScaler on numerical features...
+2025-04-11 22:43:20,341 - INFO - Applied StandardScaler.
+2025-04-11 22:43:20,342 - INFO - Creating categorical mappings...
+2025-04-11 22:43:20,393 - INFO -   Mapped 'pitch_type' (17 unique values).
+2025-04-11 22:43:20,441 - INFO -   Mapped 'stand' (2 unique values).
+2025-04-11 22:43:20,491 - INFO -   Mapped 'p_throws' (2 unique values).
+2025-04-11 22:43:20,763 - INFO -   Mapped 'inning_topbot_numeric' (2 unique values).
+2025-04-11 22:43:20,816 - INFO - Applied mapping for 'pitch_type'.
+2025-04-11 22:43:20,866 - INFO - Applied mapping for 'stand'.
+2025-04-11 22:43:20,924 - INFO - Applied mapping for 'p_throws'.
+2025-04-11 22:43:21,214 - INFO - Applied mapping for 'inning_topbot_numeric'.
+2025-04-11 22:43:21,363 - INFO - Grouping data by at-bat and creating sequence indices...
+2025-04-11 22:43:44,122 - INFO - Created 1129031 sequences from 304302 at-bats (1129031 total pitches).
+2025-04-11 22:43:44,126 - INFO - Creating Validation Dataset...
+2025-04-11 22:43:44,127 - INFO - Using pre-fitted StandardScaler.
+2025-04-11 22:43:44,265 - INFO - Applied StandardScaler.
+2025-04-11 22:43:44,266 - INFO - Using pre-defined categorical mappings.
+2025-04-11 22:43:44,278 - INFO - Applied mapping for 'pitch_type'.
+2025-04-11 22:43:44,290 - INFO - Applied mapping for 'stand'.
+2025-04-11 22:43:44,303 - INFO - Applied mapping for 'p_throws'.
+2025-04-11 22:43:44,361 - INFO - Applied mapping for 'inning_topbot_numeric'.
+2025-04-11 22:43:44,384 - INFO - Grouping data by at-bat and creating sequence indices...
+2025-04-11 22:43:49,100 - INFO - Created 226181 sequences from 60908 at-bats (226181 total pitches).
+2025-04-11 22:43:49,101 - INFO - Creating DataLoaders with batch_size=128, num_workers=0...
+2025-04-11 22:43:49,102 - INFO - DataLoaders created.
+2025-04-11 22:43:49,164 - INFO - Model initialized (801,949 params).
+2025-04-11 22:43:51,057 - INFO - 
+--- Epoch 1/5 ---
+2025-04-11 22:55:08,915 - INFO - Creating Training Dataset...
+2025-04-11 22:55:08,918 - INFO - Fitting StandardScaler on numerical features...
+2025-04-11 22:55:09,231 - INFO - Applied StandardScaler.
+2025-04-11 22:55:09,232 - INFO - Creating categorical mappings...
+2025-04-11 22:55:09,266 - INFO -   Mapped 'pitch_type' (17 unique values).
+2025-04-11 22:55:09,299 - INFO -   Mapped 'stand' (2 unique values).
+2025-04-11 22:55:09,333 - INFO -   Mapped 'p_throws' (2 unique values).
+2025-04-11 22:55:09,535 - INFO -   Mapped 'inning_topbot_numeric' (2 unique values).
+2025-04-11 22:55:09,559 - INFO - Applied mapping for 'pitch_type'.
+2025-04-11 22:55:09,585 - INFO - Applied mapping for 'stand'.
+2025-04-11 22:55:09,609 - INFO - Applied mapping for 'p_throws'.
+2025-04-11 22:55:09,757 - INFO - Applied mapping for 'inning_topbot_numeric'.
+2025-04-11 22:55:09,834 - INFO - Grouping data by at-bat and creating sequence indices...
+2025-04-11 22:55:21,070 - INFO - Created 562519 sequences from 150605 at-bats (562519 total pitches).
+2025-04-11 22:55:21,073 - INFO - Creating Validation Dataset...
+2025-04-11 22:55:21,074 - INFO - Using pre-fitted StandardScaler.
+2025-04-11 22:55:21,095 - INFO - Applied StandardScaler.
+2025-04-11 22:55:21,096 - INFO - Using pre-defined categorical mappings.
+2025-04-11 22:55:21,103 - INFO - Applied mapping for 'pitch_type'.
+2025-04-11 22:55:21,110 - INFO - Applied mapping for 'stand'.
+2025-04-11 22:55:21,116 - INFO - Applied mapping for 'p_throws'.
+2025-04-11 22:55:21,146 - INFO - Applied mapping for 'inning_topbot_numeric'.
+2025-04-11 22:55:21,160 - INFO - Grouping data by at-bat and creating sequence indices...
+2025-04-11 22:55:23,155 - INFO - Created 113631 sequences from 30429 at-bats (113631 total pitches).
+2025-04-11 22:55:23,156 - INFO - Creating DataLoaders with batch_size=32, num_workers=0...
+2025-04-11 22:55:23,158 - INFO - DataLoaders created.
+2025-04-11 22:55:23,264 - ERROR - !!! Potential IndexError in __getitem__(idx=538319) !!!
+2025-04-11 22:55:23,265 - ERROR -   Indices Range: Min=721605, Max=721605
+2025-04-11 22:55:23,266 - ERROR -   Num Array Shape[0]: 562519
+2025-04-11 22:55:23,266 - ERROR -   Act Array Shape[0]: 562519
+2025-04-11 22:55:23,268 - ERROR -   Originating from at_bat_id=719038_5, end_row_idx=721605
+2025-04-11 22:55:23,269 - ERROR -   Calculated start_idx_in_group: 0, end_idx_in_group: 0
+2025-04-11 22:55:23,270 - ERROR -   sequence_row_indices (first 5): [721605]
+2025-04-11 23:00:43,848 - INFO - Resetting index on training and validation data splits...
+2025-04-11 23:00:44,086 - INFO - Creating Training Dataset...
+2025-04-11 23:00:44,087 - INFO - Fitting StandardScaler on numerical features...
+2025-04-11 23:00:44,331 - INFO - Applied StandardScaler.
+2025-04-11 23:00:44,332 - INFO - Creating categorical mappings...
+2025-04-11 23:00:44,365 - INFO -   Mapped 'pitch_type' (17 unique values).
+2025-04-11 23:00:44,390 - INFO -   Mapped 'stand' (2 unique values).
+2025-04-11 23:00:44,415 - INFO -   Mapped 'p_throws' (2 unique values).
+2025-04-11 23:00:44,550 - INFO -   Mapped 'inning_topbot_numeric' (2 unique values).
+2025-04-11 23:00:44,574 - INFO - Applied mapping for 'pitch_type'.
+2025-04-11 23:00:44,600 - INFO - Applied mapping for 'stand'.
+2025-04-11 23:00:44,625 - INFO - Applied mapping for 'p_throws'.
+2025-04-11 23:00:44,767 - INFO - Applied mapping for 'inning_topbot_numeric'.
+2025-04-11 23:00:44,861 - INFO - Grouping data by at-bat and creating sequence indices...
+2025-04-11 23:00:56,540 - INFO - Created 562519 sequences from 150605 at-bats (562519 total pitches).
+2025-04-11 23:00:56,543 - INFO - Creating Validation Dataset...
+2025-04-11 23:00:56,544 - INFO - Using pre-fitted StandardScaler.
+2025-04-11 23:00:56,561 - INFO - Applied StandardScaler.
+2025-04-11 23:00:56,562 - INFO - Using pre-defined categorical mappings.
+2025-04-11 23:00:56,568 - INFO - Applied mapping for 'pitch_type'.
+2025-04-11 23:00:56,575 - INFO - Applied mapping for 'stand'.
+2025-04-11 23:00:56,581 - INFO - Applied mapping for 'p_throws'.
+2025-04-11 23:00:56,611 - INFO - Applied mapping for 'inning_topbot_numeric'.
+2025-04-11 23:00:56,625 - INFO - Grouping data by at-bat and creating sequence indices...
+2025-04-11 23:00:58,947 - INFO - Created 113631 sequences from 30429 at-bats (113631 total pitches).
+2025-04-11 23:00:58,948 - INFO - Creating DataLoaders with batch_size=32, num_workers=4...
+2025-04-11 23:00:58,950 - INFO - DataLoaders created.
+2025-04-11 23:01:44,971 - INFO - Resetting index on training and validation data splits...
+2025-04-11 23:01:45,509 - INFO - Creating Training Dataset...
+2025-04-11 23:01:45,510 - INFO - Fitting StandardScaler on numerical features...
+2025-04-11 23:01:45,687 - INFO - Applied StandardScaler.
+2025-04-11 23:01:45,687 - INFO - Creating categorical mappings...
+2025-04-11 23:01:45,717 - INFO -   Mapped 'pitch_type' (17 unique values).
+2025-04-11 23:01:45,742 - INFO -   Mapped 'stand' (2 unique values).
+2025-04-11 23:01:45,767 - INFO -   Mapped 'p_throws' (2 unique values).
+2025-04-11 23:01:45,902 - INFO -   Mapped 'inning_topbot_numeric' (2 unique values).
+2025-04-11 23:01:45,926 - INFO - Applied mapping for 'pitch_type'.
+2025-04-11 23:01:45,955 - INFO - Applied mapping for 'stand'.
+2025-04-11 23:01:45,982 - INFO - Applied mapping for 'p_throws'.
+2025-04-11 23:01:46,131 - INFO - Applied mapping for 'inning_topbot_numeric'.
+2025-04-11 23:01:46,196 - INFO - Grouping data by at-bat and creating sequence indices...
+2025-04-11 23:01:57,693 - INFO - Created 562519 sequences from 150605 at-bats (562519 total pitches).
+2025-04-11 23:01:57,696 - INFO - Creating Validation Dataset...
+2025-04-11 23:01:57,697 - INFO - Using pre-fitted StandardScaler.
+2025-04-11 23:01:57,718 - INFO - Applied StandardScaler.
+2025-04-11 23:01:57,719 - INFO - Using pre-defined categorical mappings.
+2025-04-11 23:01:57,726 - INFO - Applied mapping for 'pitch_type'.
+2025-04-11 23:01:57,732 - INFO - Applied mapping for 'stand'.
+2025-04-11 23:01:57,739 - INFO - Applied mapping for 'p_throws'.
+2025-04-11 23:01:57,769 - INFO - Applied mapping for 'inning_topbot_numeric'.
+2025-04-11 23:01:57,788 - INFO - Grouping data by at-bat and creating sequence indices...
+2025-04-11 23:02:00,146 - INFO - Created 113631 sequences from 30429 at-bats (113631 total pitches).
+2025-04-11 23:02:00,148 - INFO - Creating DataLoaders with batch_size=32, num_workers=0...
+2025-04-11 23:02:00,149 - INFO - DataLoaders created.
+2025-04-11 23:02:55,619 - INFO - Starting training orchestration with caching...
+2025-04-11 23:02:55,621 - INFO - Using CUDA device.
+2025-04-11 23:02:55,622 - INFO - 
+--- Processing Year: 2022 ---
+2025-04-11 23:02:55,623 - INFO - Loading cached processed data for 2022 from dataset/processed_statcast_2022.parquet
+2025-04-11 23:02:56,141 - INFO - Loaded 754158 processed pitches from cache for 2022.
+2025-04-11 23:02:56,142 - INFO - 
+--- Processing Year: 2023 ---
+2025-04-11 23:02:56,143 - INFO - Loading cached processed data for 2023 from dataset/processed_statcast_2023.parquet
+2025-04-11 23:02:56,578 - INFO - Loaded 751775 processed pitches from cache for 2023.
+2025-04-11 23:02:56,580 - INFO - Concatenating processed data from all years...
+2025-04-11 23:02:56,896 - INFO - Total processed pitches combined: 1505933
+2025-04-11 23:02:56,897 - INFO - Final Numerical Features for Training: ['release_speed', 'release_pos_x', 'release_pos_z', 'release_extension', 'release_spin_rate', 'spin_axis', 'pfx_x', 'pfx_z', 'inning', 'outs_when_up', 'score_diff', 'balls', 'strikes', 'on_1b_flag', 'on_2b_flag', 'on_3b_flag']
+2025-04-11 23:02:56,898 - INFO - Final Categorical Features for Training: ['pitch_type', 'stand', 'p_throws', 'inning_topbot_numeric']
+2025-04-11 23:02:56,932 - INFO - Splitting combined data based on 5404 unique games.
+2025-04-11 23:02:57,666 - INFO - Data split: Train=1129031, Val=226181, Test=150721
+2025-04-11 23:02:57,667 - INFO - Resetting index on training and validation data splits...
+2025-04-11 23:02:57,858 - INFO - Creating Training Dataset...
+2025-04-11 23:02:57,859 - INFO - Fitting StandardScaler on numerical features...
+2025-04-11 23:02:58,944 - INFO - Applied StandardScaler.
+2025-04-11 23:02:58,945 - INFO - Creating categorical mappings...
+2025-04-11 23:02:58,996 - INFO -   Mapped 'pitch_type' (17 unique values).
+2025-04-11 23:02:59,044 - INFO -   Mapped 'stand' (2 unique values).
+2025-04-11 23:02:59,092 - INFO -   Mapped 'p_throws' (2 unique values).
+2025-04-11 23:02:59,361 - INFO -   Mapped 'inning_topbot_numeric' (2 unique values).
+2025-04-11 23:02:59,415 - INFO - Applied mapping for 'pitch_type'.
+2025-04-11 23:02:59,466 - INFO - Applied mapping for 'stand'.
+2025-04-11 23:02:59,523 - INFO - Applied mapping for 'p_throws'.
+2025-04-11 23:02:59,810 - INFO - Applied mapping for 'inning_topbot_numeric'.
+2025-04-11 23:02:59,967 - INFO - Grouping data by at-bat and creating sequence indices...
+2025-04-11 23:03:23,018 - INFO - Created 1129031 sequences from 304302 at-bats (1129031 total pitches).
+2025-04-11 23:03:23,022 - INFO - Creating Validation Dataset...
+2025-04-11 23:03:23,023 - INFO - Using pre-fitted StandardScaler.
+2025-04-11 23:03:23,151 - INFO - Applied StandardScaler.
+2025-04-11 23:03:23,152 - INFO - Using pre-defined categorical mappings.
+2025-04-11 23:03:23,165 - INFO - Applied mapping for 'pitch_type'.
+2025-04-11 23:03:23,177 - INFO - Applied mapping for 'stand'.
+2025-04-11 23:03:23,189 - INFO - Applied mapping for 'p_throws'.
+2025-04-11 23:03:23,246 - INFO - Applied mapping for 'inning_topbot_numeric'.
+2025-04-11 23:03:23,268 - INFO - Grouping data by at-bat and creating sequence indices...
+2025-04-11 23:03:27,788 - INFO - Created 226181 sequences from 60908 at-bats (226181 total pitches).
+2025-04-11 23:03:27,790 - INFO - Creating DataLoaders with batch_size=128, num_workers=0...
+2025-04-11 23:03:27,791 - INFO - DataLoaders created.
+2025-04-11 23:03:27,838 - INFO - Model initialized (801,949 params).
+2025-04-11 23:03:27,839 - INFO - 
+--- Epoch 1/5 ---
+2025-04-11 23:05:01,151 - INFO - Starting training orchestration with caching...
+2025-04-11 23:05:01,154 - INFO - Using CUDA device.
+2025-04-11 23:05:01,156 - INFO - 
+--- Processing Year: 2022 ---
+2025-04-11 23:05:01,157 - INFO - Loading cached processed data for 2022 from dataset/processed_statcast_2022.parquet
+2025-04-11 23:05:01,525 - INFO - Loaded 754158 processed pitches from cache for 2022.
+2025-04-11 23:05:01,526 - INFO - 
+--- Processing Year: 2023 ---
+2025-04-11 23:05:01,528 - INFO - Loading cached processed data for 2023 from dataset/processed_statcast_2023.parquet
+2025-04-11 23:05:01,872 - INFO - Loaded 751775 processed pitches from cache for 2023.
+2025-04-11 23:05:01,873 - INFO - Concatenating processed data from all years...
+2025-04-11 23:05:02,094 - INFO - Total processed pitches combined: 1505933
+2025-04-11 23:05:02,096 - INFO - Final Numerical Features for Training: ['release_speed', 'release_pos_x', 'release_pos_z', 'release_extension', 'release_spin_rate', 'spin_axis', 'pfx_x', 'pfx_z', 'inning', 'outs_when_up', 'score_diff', 'balls', 'strikes', 'on_1b_flag', 'on_2b_flag', 'on_3b_flag']
+2025-04-11 23:05:02,097 - INFO - Final Categorical Features for Training: ['pitch_type', 'stand', 'p_throws', 'inning_topbot_numeric']
+2025-04-11 23:05:02,125 - INFO - Splitting combined data based on 5404 unique games.
+2025-04-11 23:05:02,795 - INFO - Data split: Train=1129031, Val=226181, Test=150721
+2025-04-11 23:05:02,796 - INFO - Resetting index on training and validation data splits...
+2025-04-11 23:05:02,986 - INFO - Creating Training Dataset...
+2025-04-11 23:05:02,987 - INFO - Fitting StandardScaler on numerical features...
+2025-04-11 23:05:03,995 - INFO - Applied StandardScaler.
+2025-04-11 23:05:03,996 - INFO - Creating categorical mappings...
+2025-04-11 23:05:04,045 - INFO -   Mapped 'pitch_type' (17 unique values).
+2025-04-11 23:05:04,094 - INFO -   Mapped 'stand' (2 unique values).
+2025-04-11 23:05:04,143 - INFO -   Mapped 'p_throws' (2 unique values).
+2025-04-11 23:05:04,410 - INFO -   Mapped 'inning_topbot_numeric' (2 unique values).
+2025-04-11 23:05:04,462 - INFO - Applied mapping for 'pitch_type'.
+2025-04-11 23:05:04,513 - INFO - Applied mapping for 'stand'.
+2025-04-11 23:05:04,568 - INFO - Applied mapping for 'p_throws'.
+2025-04-11 23:05:04,852 - INFO - Applied mapping for 'inning_topbot_numeric'.
+2025-04-11 23:05:05,010 - INFO - Grouping data by at-bat and creating sequence indices...
+2025-04-11 23:05:47,895 - INFO - Created 1129031 sequences from 304302 at-bats (1129031 total pitches).
+2025-04-11 23:05:47,898 - INFO - Creating Validation Dataset...
+2025-04-11 23:05:47,900 - INFO - Using pre-fitted StandardScaler.
+2025-04-11 23:05:48,033 - INFO - Applied StandardScaler.
+2025-04-11 23:05:48,034 - INFO - Using pre-defined categorical mappings.
+2025-04-11 23:05:48,047 - INFO - Applied mapping for 'pitch_type'.
+2025-04-11 23:05:48,059 - INFO - Applied mapping for 'stand'.
+2025-04-11 23:05:48,072 - INFO - Applied mapping for 'p_throws'.
+2025-04-11 23:05:48,132 - INFO - Applied mapping for 'inning_topbot_numeric'.
+2025-04-11 23:05:48,154 - INFO - Grouping data by at-bat and creating sequence indices...
+2025-04-11 23:05:52,875 - INFO - Created 226181 sequences from 60908 at-bats (226181 total pitches).
+2025-04-11 23:05:52,877 - INFO - Creating DataLoaders with batch_size=128, num_workers=0...
+2025-04-11 23:05:52,878 - INFO - DataLoaders created.
+2025-04-11 23:05:52,928 - INFO - Model initialized (801,949 params).
+2025-04-11 23:05:52,929 - INFO - 
+--- Epoch 1/5 ---
+2025-04-11 23:13:11,130 - INFO - Epoch 1 Train Loss: 12.7456

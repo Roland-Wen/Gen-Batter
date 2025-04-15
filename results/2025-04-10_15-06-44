@@ -1,0 +1,391 @@
+2025-04-10 22:10:36,108 - INFO - Starting training orchestration with caching...
+2025-04-10 22:10:36,109 - INFO - Using CUDA device.
+2025-04-10 22:10:36,110 - INFO - 
+--- Processing Year: 2022 ---
+2025-04-10 22:10:36,110 - INFO - Processing raw data for 2022...
+2025-04-10 22:11:26,893 - INFO - Starting training orchestration with caching...
+2025-04-10 22:11:26,893 - INFO - Using CUDA device.
+2025-04-10 22:11:26,893 - INFO - 
+--- Processing Year: 2022 ---
+2025-04-10 22:11:26,894 - INFO - Processing raw data for 2022...
+2025-04-10 22:12:51,883 - INFO - Starting training orchestration with caching...
+2025-04-10 22:12:51,884 - INFO - Using CUDA device.
+2025-04-10 22:12:51,884 - INFO - 
+--- Processing Year: 2022 ---
+2025-04-10 22:12:51,885 - INFO - Processing raw data for 2022...
+2025-04-10 22:14:01,900 - INFO - Starting training orchestration with caching...
+2025-04-10 22:14:01,900 - INFO - Using CUDA device.
+2025-04-10 22:14:01,900 - INFO - 
+--- Processing Year: 2022 ---
+2025-04-10 22:14:01,901 - INFO - Processing raw data for 2022...
+2025-04-10 22:14:01,902 - INFO - No valid cache found for 2022. Fetching from pybaseball...
+2025-04-10 22:14:01,902 - INFO - Fetching Statcast data for 2022 from 2022-03-01 to 2022-11-30
+2025-04-10 22:14:01,902 - INFO -   Fetching chunk: 2022-03-01 to 2022-03-07
+2025-04-10 22:14:03,913 - INFO -   Fetching chunk: 2022-03-08 to 2022-03-14
+2025-04-10 22:14:05,919 - INFO -   Fetching chunk: 2022-03-15 to 2022-03-21
+2025-04-10 22:14:13,049 - INFO -   Fetched 11811 pitches.
+2025-04-10 22:14:15,049 - INFO -   Fetching chunk: 2022-03-22 to 2022-03-28
+2025-04-10 22:14:22,130 - INFO -   Fetched 19255 pitches.
+2025-04-10 22:14:24,130 - INFO -   Fetching chunk: 2022-03-29 to 2022-04-04
+2025-04-10 22:14:30,603 - INFO -   Fetched 18924 pitches.
+2025-04-10 22:14:32,603 - INFO -   Fetching chunk: 2022-04-05 to 2022-04-11
+2025-04-10 22:16:52,493 - INFO - Starting training orchestration with caching...
+2025-04-10 22:16:52,494 - INFO - Using CUDA device.
+2025-04-10 22:16:52,495 - INFO - 
+--- Processing Year: 2022 ---
+2025-04-10 22:16:52,495 - INFO - Processing raw data for 2022...
+2025-04-10 22:16:52,495 - INFO - No valid cache found for 2022. Fetching from pybaseball...
+2025-04-10 22:16:52,495 - INFO - Fetching Statcast data for 2022 from 2022-03-01 to 2022-11-30
+2025-04-10 22:16:52,495 - INFO -   Fetching chunk: 2022-03-01 to 2022-03-07
+2025-04-10 22:16:54,501 - INFO -   Fetching chunk: 2022-03-08 to 2022-03-14
+2025-04-10 22:16:56,507 - INFO -   Fetching chunk: 2022-03-15 to 2022-03-21
+2025-04-10 22:17:03,974 - INFO -   Fetched 11811 pitches.
+2025-04-10 22:17:05,975 - INFO -   Fetching chunk: 2022-03-22 to 2022-03-28
+2025-04-10 22:17:20,034 - INFO -   Fetched 19255 pitches.
+2025-04-10 22:17:22,035 - INFO -   Fetching chunk: 2022-03-29 to 2022-04-04
+2025-04-10 22:17:37,851 - INFO -   Fetched 18924 pitches.
+2025-04-10 22:17:39,852 - INFO -   Fetching chunk: 2022-04-05 to 2022-04-11
+2025-04-10 22:17:50,919 - INFO -   Fetched 20785 pitches.
+2025-04-10 22:17:52,920 - INFO -   Fetching chunk: 2022-04-12 to 2022-04-18
+2025-04-10 22:18:01,310 - INFO -   Fetched 26451 pitches.
+2025-04-10 22:18:03,310 - INFO -   Fetching chunk: 2022-04-19 to 2022-04-25
+2025-04-10 22:18:18,426 - INFO -   Fetched 26780 pitches.
+2025-04-10 22:18:20,427 - INFO -   Fetching chunk: 2022-04-26 to 2022-05-02
+2025-04-10 22:18:42,119 - INFO -   Fetched 27927 pitches.
+2025-04-10 22:18:44,119 - INFO -   Fetching chunk: 2022-05-03 to 2022-05-09
+2025-04-10 22:18:54,034 - INFO -   Fetched 26875 pitches.
+2025-04-10 22:18:56,035 - INFO -   Fetching chunk: 2022-05-10 to 2022-05-16
+2025-04-10 22:19:05,299 - INFO -   Fetched 28101 pitches.
+2025-04-10 22:19:07,300 - INFO -   Fetching chunk: 2022-05-17 to 2022-05-23
+2025-04-10 22:19:29,683 - INFO -   Fetched 28347 pitches.
+2025-04-10 22:19:31,684 - INFO -   Fetching chunk: 2022-05-24 to 2022-05-30
+2025-04-10 22:19:41,897 - INFO -   Fetched 28246 pitches.
+2025-04-10 22:19:43,897 - INFO -   Fetching chunk: 2022-05-31 to 2022-06-06
+2025-04-10 22:20:04,021 - INFO -   Fetched 27636 pitches.
+2025-04-10 22:20:06,021 - INFO -   Fetching chunk: 2022-06-07 to 2022-06-13
+2025-04-10 22:20:20,987 - INFO -   Fetched 28671 pitches.
+2025-04-10 22:20:22,987 - INFO -   Fetching chunk: 2022-06-14 to 2022-06-20
+2025-04-10 22:20:34,779 - INFO -   Fetched 27882 pitches.
+2025-04-10 22:20:36,779 - INFO -   Fetching chunk: 2022-06-21 to 2022-06-27
+2025-04-10 22:20:47,201 - INFO -   Fetched 27655 pitches.
+2025-04-10 22:20:49,201 - INFO -   Fetching chunk: 2022-06-28 to 2022-07-04
+2025-04-10 22:21:09,688 - INFO -   Fetched 28965 pitches.
+2025-04-10 22:21:11,689 - INFO -   Fetching chunk: 2022-07-05 to 2022-07-11
+2025-04-10 22:21:24,940 - INFO -   Fetched 28486 pitches.
+2025-04-10 22:21:26,941 - INFO -   Fetching chunk: 2022-07-12 to 2022-07-18
+2025-04-10 22:21:36,820 - INFO -   Fetched 25440 pitches.
+2025-04-10 22:21:38,821 - INFO -   Fetching chunk: 2022-07-19 to 2022-07-25
+2025-04-10 22:21:47,798 - INFO -   Fetched 18707 pitches.
+2025-04-10 22:21:49,799 - INFO -   Fetching chunk: 2022-07-26 to 2022-08-01
+2025-04-10 22:22:11,143 - INFO -   Fetched 26920 pitches.
+2025-04-10 22:22:13,144 - INFO -   Fetching chunk: 2022-08-02 to 2022-08-08
+2025-04-10 22:22:23,146 - INFO -   Fetched 27475 pitches.
+2025-04-10 22:22:25,146 - INFO -   Fetching chunk: 2022-08-09 to 2022-08-15
+2025-04-10 22:22:43,134 - INFO -   Fetched 28272 pitches.
+2025-04-10 22:22:45,134 - INFO -   Fetching chunk: 2022-08-16 to 2022-08-22
+2025-04-10 22:22:55,292 - INFO -   Fetched 27467 pitches.
+2025-04-10 22:22:57,292 - INFO -   Fetching chunk: 2022-08-23 to 2022-08-29
+2025-04-10 22:23:17,077 - INFO -   Fetched 27372 pitches.
+2025-04-10 22:23:19,077 - INFO -   Fetching chunk: 2022-08-30 to 2022-09-05
+2025-04-10 22:23:28,986 - INFO -   Fetched 27662 pitches.
+2025-04-10 22:23:30,986 - INFO -   Fetching chunk: 2022-09-06 to 2022-09-12
+2025-04-10 22:23:40,630 - INFO -   Fetched 26781 pitches.
+2025-04-10 22:23:42,631 - INFO -   Fetching chunk: 2022-09-13 to 2022-09-19
+2025-04-10 22:23:52,024 - INFO -   Fetched 27542 pitches.
+2025-04-10 22:23:54,024 - INFO -   Fetching chunk: 2022-09-20 to 2022-09-26
+2025-04-10 22:24:03,939 - INFO -   Fetched 27077 pitches.
+2025-04-10 22:24:05,939 - INFO -   Fetching chunk: 2022-09-27 to 2022-10-03
+2025-04-10 22:24:26,368 - INFO -   Fetched 28954 pitches.
+2025-04-10 22:24:28,369 - INFO -   Fetching chunk: 2022-10-04 to 2022-10-10
+2025-04-10 22:24:36,791 - INFO -   Fetched 12147 pitches.
+2025-04-10 22:24:38,791 - INFO -   Fetching chunk: 2022-10-11 to 2022-10-17
+2025-04-10 22:24:42,241 - INFO -   Fetched 4520 pitches.
+2025-04-10 22:24:44,241 - INFO -   Fetching chunk: 2022-10-18 to 2022-10-24
+2025-04-10 22:24:47,122 - INFO -   Fetched 2759 pitches.
+2025-04-10 22:24:49,123 - INFO -   Fetching chunk: 2022-10-25 to 2022-10-31
+2025-04-10 22:24:50,533 - INFO -   Fetched 606 pitches.
+2025-04-10 22:24:52,534 - INFO -   Fetching chunk: 2022-11-01 to 2022-11-07
+2025-04-10 22:24:53,715 - INFO -   Fetched 1120 pitches.
+2025-04-10 22:24:55,716 - INFO -   Fetching chunk: 2022-11-08 to 2022-11-14
+2025-04-10 22:24:58,485 - INFO -   Fetching chunk: 2022-11-15 to 2022-11-21
+2025-04-10 22:25:01,579 - INFO -   Fetching chunk: 2022-11-22 to 2022-11-28
+2025-04-10 22:25:03,585 - INFO -   Fetching chunk: 2022-11-29 to 2022-11-30
+2025-04-10 22:25:06,202 - INFO - Finished fetching for 2022. Total raw pitches: 773618
+2025-04-10 22:25:06,202 - INFO - Saving raw data for 2022 to dataset/raw_statcast_2022.parquet
+2025-04-10 22:25:09,167 - INFO - Preprocessing data. Initial shape: (773618, 113)
+2025-04-10 22:25:10,463 - INFO - Shape after filtering descriptions: (754158, 113)
+2025-04-10 22:25:10,733 - INFO - Target variables created/processed.
+2025-04-10 22:25:10,976 - INFO - Shape after feature selection: (754158, 26)
+2025-04-10 22:25:10,991 - INFO - Imputed NaNs in numerical feature 'release_speed' with median (90.00).
+2025-04-10 22:25:11,001 - INFO - Imputed NaNs in numerical feature 'release_pos_x' with median (-1.51).
+2025-04-10 22:25:11,011 - INFO - Imputed NaNs in numerical feature 'release_pos_z' with median (5.85).
+2025-04-10 22:25:11,022 - INFO - Imputed NaNs in numerical feature 'release_extension' with median (6.30).
+2025-04-10 22:25:11,034 - INFO - Imputed NaNs in numerical feature 'release_spin_rate' with median (2272.00).
+2025-04-10 22:25:11,047 - INFO - Imputed NaNs in numerical feature 'spin_axis' with median (199.00).
+2025-04-10 22:25:11,058 - INFO - Imputed NaNs in numerical feature 'pfx_x' with median (-0.19).
+2025-04-10 22:25:11,070 - INFO - Imputed NaNs in numerical feature 'pfx_z' with median (0.72).
+2025-04-10 22:25:12,092 - INFO - Preprocessing complete. Final shape: (754158, 27)
+2025-04-10 22:25:12,093 - INFO - Final Numerical Features: ['release_speed', 'release_pos_x', 'release_pos_z', 'release_extension', 'release_spin_rate', 'spin_axis', 'pfx_x', 'pfx_z', 'inning', 'outs_when_up', 'score_diff', 'balls', 'strikes', 'on_1b_flag', 'on_2b_flag', 'on_3b_flag']
+2025-04-10 22:25:12,093 - INFO - Final Categorical Features: ['pitch_type', 'stand', 'p_throws', 'inning_topbot_numeric']
+2025-04-10 22:25:12,093 - INFO - Saving processed data for 2022 to dataset/processed_statcast_2022.parquet
+2025-04-10 22:25:12,752 - INFO - 
+--- Processing Year: 2023 ---
+2025-04-10 22:25:12,753 - INFO - Processing raw data for 2023...
+2025-04-10 22:25:12,753 - INFO - No valid cache found for 2023. Fetching from pybaseball...
+2025-04-10 22:25:12,753 - INFO - Fetching Statcast data for 2023 from 2023-03-01 to 2023-11-30
+2025-04-10 22:25:12,754 - INFO -   Fetching chunk: 2023-03-01 to 2023-03-07
+2025-04-10 22:25:14,759 - INFO -   Fetching chunk: 2023-03-08 to 2023-03-14
+2025-04-10 22:25:16,764 - INFO -   Fetching chunk: 2023-03-15 to 2023-03-21
+2025-04-10 22:25:24,067 - INFO -   Fetched 20265 pitches.
+2025-04-10 22:25:26,068 - INFO -   Fetching chunk: 2023-03-22 to 2023-03-28
+2025-04-10 22:25:33,878 - INFO -   Fetched 21018 pitches.
+2025-04-10 22:25:35,879 - INFO -   Fetching chunk: 2023-03-29 to 2023-04-04
+2025-04-10 22:25:45,134 - INFO -   Fetched 23294 pitches.
+2025-04-10 22:25:47,134 - INFO -   Fetching chunk: 2023-04-05 to 2023-04-11
+2025-04-10 22:25:57,106 - INFO -   Fetched 27273 pitches.
+2025-04-10 22:25:59,106 - INFO -   Fetching chunk: 2023-04-12 to 2023-04-18
+2025-04-10 22:26:08,897 - INFO -   Fetched 28146 pitches.
+2025-04-10 22:26:10,898 - INFO -   Fetching chunk: 2023-04-19 to 2023-04-25
+2025-04-10 22:26:33,655 - INFO -   Fetched 27343 pitches.
+2025-04-10 22:26:35,655 - INFO -   Fetching chunk: 2023-04-26 to 2023-05-02
+2025-04-10 22:26:46,063 - INFO -   Fetched 26450 pitches.
+2025-04-10 22:26:48,063 - INFO -   Fetching chunk: 2023-05-03 to 2023-05-09
+2025-04-10 22:26:59,431 - INFO -   Fetched 28349 pitches.
+2025-04-10 22:27:01,432 - INFO -   Fetching chunk: 2023-05-10 to 2023-05-16
+2025-04-10 22:27:23,584 - INFO -   Fetched 27195 pitches.
+2025-04-10 22:27:25,585 - INFO -   Fetching chunk: 2023-05-17 to 2023-05-23
+2025-04-10 22:27:35,610 - INFO -   Fetched 27225 pitches.
+2025-04-10 22:27:37,611 - INFO -   Fetching chunk: 2023-05-24 to 2023-05-30
+2025-04-10 22:27:47,229 - INFO -   Fetched 28395 pitches.
+2025-04-10 22:27:49,229 - INFO -   Fetching chunk: 2023-05-31 to 2023-06-06
+2025-04-10 22:28:00,747 - INFO -   Fetched 26234 pitches.
+2025-04-10 22:28:02,747 - INFO -   Fetching chunk: 2023-06-07 to 2023-06-13
+2025-04-10 22:28:11,306 - INFO -   Fetched 27132 pitches.
+2025-04-10 22:28:13,306 - INFO -   Fetching chunk: 2023-06-14 to 2023-06-20
+2025-04-10 22:28:23,487 - INFO -   Fetched 28264 pitches.
+2025-04-10 22:28:25,487 - INFO -   Fetching chunk: 2023-06-21 to 2023-06-27
+2025-04-10 22:28:45,071 - INFO -   Fetched 25405 pitches.
+2025-04-10 22:28:47,072 - INFO -   Fetching chunk: 2023-06-28 to 2023-07-04
+2025-04-10 22:29:07,229 - INFO -   Fetched 29015 pitches.
+2025-04-10 22:29:09,229 - INFO -   Fetching chunk: 2023-07-05 to 2023-07-11
+2025-04-10 22:29:20,476 - INFO -   Fetched 20340 pitches.
+2025-04-10 22:29:22,477 - INFO -   Fetching chunk: 2023-07-12 to 2023-07-18
+2025-04-10 22:29:37,881 - INFO -   Fetched 21432 pitches.
+2025-04-10 22:29:39,881 - INFO -   Fetching chunk: 2023-07-19 to 2023-07-25
+2025-04-10 22:29:49,578 - INFO -   Fetched 27638 pitches.
+2025-04-10 22:29:51,579 - INFO -   Fetching chunk: 2023-07-26 to 2023-08-01
+2025-04-10 22:30:12,432 - INFO -   Fetched 25925 pitches.
+2025-04-10 22:30:14,432 - INFO -   Fetching chunk: 2023-08-02 to 2023-08-08
+2025-04-10 22:30:35,608 - INFO -   Fetched 28230 pitches.
+2025-04-10 22:30:37,609 - INFO -   Fetching chunk: 2023-08-09 to 2023-08-15
+2025-04-10 22:30:47,168 - INFO -   Fetched 27088 pitches.
+2025-04-10 22:30:49,169 - INFO -   Fetching chunk: 2023-08-16 to 2023-08-22
+2025-04-10 22:31:02,306 - INFO -   Fetched 26501 pitches.
+2025-04-10 22:31:04,306 - INFO -   Fetching chunk: 2023-08-23 to 2023-08-29
+2025-04-10 22:31:14,238 - INFO -   Fetched 29089 pitches.
+2025-04-10 22:31:16,239 - INFO -   Fetching chunk: 2023-08-30 to 2023-09-05
+2025-04-10 22:31:26,904 - INFO -   Fetched 27240 pitches.
+2025-04-10 22:31:28,905 - INFO -   Fetching chunk: 2023-09-06 to 2023-09-12
+2025-04-10 22:31:39,259 - INFO -   Fetched 28842 pitches.
+2025-04-10 22:31:41,259 - INFO -   Fetching chunk: 2023-09-13 to 2023-09-19
+2025-04-10 22:31:51,681 - INFO -   Fetched 28497 pitches.
+2025-04-10 22:31:53,682 - INFO -   Fetching chunk: 2023-09-20 to 2023-09-26
+2025-04-10 22:32:05,249 - INFO -   Fetched 26146 pitches.
+2025-04-10 22:32:07,249 - INFO -   Fetching chunk: 2023-09-27 to 2023-10-03
+2025-04-10 22:32:17,739 - INFO -   Fetched 22441 pitches.
+2025-04-10 22:32:19,740 - INFO -   Fetching chunk: 2023-10-04 to 2023-10-10
+2025-04-10 22:32:21,708 - INFO -   Fetched 4114 pitches.
+2025-04-10 22:32:23,708 - INFO -   Fetching chunk: 2023-10-11 to 2023-10-17
+2025-04-10 22:32:26,370 - INFO -   Fetched 2188 pitches.
+2025-04-10 22:32:28,370 - INFO -   Fetching chunk: 2023-10-18 to 2023-10-24
+2025-04-10 22:32:30,264 - INFO -   Fetched 2853 pitches.
+2025-04-10 22:32:32,264 - INFO -   Fetching chunk: 2023-10-25 to 2023-10-31
+2025-04-10 22:32:33,804 - INFO -   Fetched 1217 pitches.
+2025-04-10 22:32:35,804 - INFO -   Fetching chunk: 2023-11-01 to 2023-11-07
+2025-04-10 22:32:36,486 - INFO -   Fetched 273 pitches.
+2025-04-10 22:32:38,487 - INFO -   Fetching chunk: 2023-11-08 to 2023-11-14
+2025-04-10 22:32:41,289 - INFO -   Fetching chunk: 2023-11-15 to 2023-11-21
+2025-04-10 22:32:43,950 - INFO -   Fetching chunk: 2023-11-22 to 2023-11-28
+2025-04-10 22:32:45,955 - INFO -   Fetching chunk: 2023-11-29 to 2023-11-30
+2025-04-10 22:32:48,566 - INFO - Finished fetching for 2023. Total raw pitches: 771057
+2025-04-10 22:32:48,566 - INFO - Saving raw data for 2023 to dataset/raw_statcast_2023.parquet
+2025-04-10 22:32:51,565 - INFO - Preprocessing data. Initial shape: (771057, 113)
+2025-04-10 22:32:52,673 - INFO - Shape after filtering descriptions: (751775, 113)
+2025-04-10 22:32:52,934 - INFO - Target variables created/processed.
+2025-04-10 22:32:53,088 - INFO - Shape after feature selection: (751775, 26)
+2025-04-10 22:32:53,102 - INFO - Imputed NaNs in numerical feature 'release_speed' with median (90.00).
+2025-04-10 22:32:53,112 - INFO - Imputed NaNs in numerical feature 'release_pos_x' with median (-1.53).
+2025-04-10 22:32:53,123 - INFO - Imputed NaNs in numerical feature 'release_pos_z' with median (5.81).
+2025-04-10 22:32:53,133 - INFO - Imputed NaNs in numerical feature 'release_extension' with median (6.40).
+2025-04-10 22:32:53,145 - INFO - Imputed NaNs in numerical feature 'release_spin_rate' with median (2276.00).
+2025-04-10 22:32:53,155 - INFO - Imputed NaNs in numerical feature 'spin_axis' with median (201.00).
+2025-04-10 22:32:53,166 - INFO - Imputed NaNs in numerical feature 'pfx_x' with median (-0.20).
+2025-04-10 22:32:53,178 - INFO - Imputed NaNs in numerical feature 'pfx_z' with median (0.66).
+2025-04-10 22:32:54,154 - INFO - Preprocessing complete. Final shape: (751775, 27)
+2025-04-10 22:32:54,154 - INFO - Final Numerical Features: ['release_speed', 'release_pos_x', 'release_pos_z', 'release_extension', 'release_spin_rate', 'spin_axis', 'pfx_x', 'pfx_z', 'inning', 'outs_when_up', 'score_diff', 'balls', 'strikes', 'on_1b_flag', 'on_2b_flag', 'on_3b_flag']
+2025-04-10 22:32:54,154 - INFO - Final Categorical Features: ['pitch_type', 'stand', 'p_throws', 'inning_topbot_numeric']
+2025-04-10 22:32:54,154 - INFO - Saving processed data for 2023 to dataset/processed_statcast_2023.parquet
+2025-04-10 22:32:54,847 - INFO - Concatenating processed data from all years...
+2025-04-10 22:32:54,981 - INFO - Total processed pitches combined: 1505933
+2025-04-10 22:32:54,981 - INFO - Final Numerical Features for Training: ['release_speed', 'release_pos_x', 'release_pos_z', 'release_extension', 'release_spin_rate', 'spin_axis', 'pfx_x', 'pfx_z', 'inning', 'outs_when_up', 'score_diff', 'balls', 'strikes', 'on_1b_flag', 'on_2b_flag', 'on_3b_flag']
+2025-04-10 22:32:54,981 - INFO - Final Categorical Features for Training: ['pitch_type', 'stand', 'p_throws', 'inning_topbot_numeric']
+2025-04-10 22:32:54,995 - INFO - Splitting combined data based on 5404 unique games.
+2025-04-10 22:32:55,398 - INFO - Data split: Train=1129031, Val=226181, Test=150721
+2025-04-10 22:32:55,398 - INFO - Creating Training Dataset...
+2025-04-10 22:32:55,398 - INFO - Fitting StandardScaler on numerical features...
+2025-04-10 22:32:56,184 - INFO - Applied StandardScaler.
+2025-04-10 22:32:56,184 - INFO - Creating categorical mappings...
+2025-04-10 22:32:56,229 - INFO -   Mapped 'pitch_type' (17 unique values).
+2025-04-10 22:32:56,269 - INFO -   Mapped 'stand' (2 unique values).
+2025-04-10 22:32:56,309 - INFO -   Mapped 'p_throws' (2 unique values).
+2025-04-10 22:32:56,535 - INFO -   Mapped 'inning_topbot_numeric' (2 unique values).
+2025-04-10 22:32:56,590 - INFO - Applied mapping for 'pitch_type'.
+2025-04-10 22:32:56,630 - INFO - Applied mapping for 'stand'.
+2025-04-10 22:32:56,667 - INFO - Applied mapping for 'p_throws'.
+2025-04-10 22:32:56,917 - INFO - Applied mapping for 'inning_topbot_numeric'.
+2025-04-10 22:32:57,032 - INFO - Grouping data by at-bat and creating sequence indices...
+2025-04-10 22:33:14,449 - INFO - Created 1129031 sequences from 304302 at-bats (1129031 total pitches).
+2025-04-10 22:33:14,453 - INFO - Creating Validation Dataset...
+2025-04-10 22:33:14,453 - INFO - Using pre-fitted StandardScaler.
+2025-04-10 22:33:14,602 - INFO - Applied StandardScaler.
+2025-04-10 22:33:14,602 - INFO - Using pre-defined categorical mappings.
+2025-04-10 22:33:14,614 - INFO - Applied mapping for 'pitch_type'.
+2025-04-10 22:33:14,623 - INFO - Applied mapping for 'stand'.
+2025-04-10 22:33:14,631 - INFO - Applied mapping for 'p_throws'.
+2025-04-10 22:33:14,680 - INFO - Applied mapping for 'inning_topbot_numeric'.
+2025-04-10 22:33:14,703 - INFO - Grouping data by at-bat and creating sequence indices...
+2025-04-10 22:33:18,053 - INFO - Created 226181 sequences from 60908 at-bats (226181 total pitches).
+2025-04-10 22:33:18,053 - INFO - Creating DataLoaders with batch_size=128, num_workers=4...
+2025-04-10 22:33:18,054 - INFO - DataLoaders created.
+2025-04-10 23:09:24,299 - INFO - Starting training orchestration with caching...
+2025-04-10 23:09:24,300 - INFO - Using CUDA device.
+2025-04-10 23:09:24,300 - INFO - 
+--- Processing Year: 2022 ---
+2025-04-10 23:09:24,301 - INFO - Loading cached processed data for 2022 from dataset/processed_statcast_2022.parquet
+2025-04-10 23:09:24,693 - INFO - Loaded 754158 processed pitches from cache for 2022.
+2025-04-10 23:09:24,693 - INFO - 
+--- Processing Year: 2023 ---
+2025-04-10 23:09:24,693 - INFO - Loading cached processed data for 2023 from dataset/processed_statcast_2023.parquet
+2025-04-10 23:09:24,967 - INFO - Loaded 751775 processed pitches from cache for 2023.
+2025-04-10 23:09:24,967 - INFO - Concatenating processed data from all years...
+2025-04-10 23:09:25,126 - INFO - Total processed pitches combined: 1505933
+2025-04-10 23:09:25,126 - INFO - Final Numerical Features for Training: ['release_speed', 'release_pos_x', 'release_pos_z', 'release_extension', 'release_spin_rate', 'spin_axis', 'pfx_x', 'pfx_z', 'inning', 'outs_when_up', 'score_diff', 'balls', 'strikes', 'on_1b_flag', 'on_2b_flag', 'on_3b_flag']
+2025-04-10 23:09:25,126 - INFO - Final Categorical Features for Training: ['pitch_type', 'stand', 'p_throws', 'inning_topbot_numeric']
+2025-04-10 23:09:25,144 - INFO - Splitting combined data based on 5404 unique games.
+2025-04-10 23:09:25,647 - INFO - Data split: Train=1129031, Val=226181, Test=150721
+2025-04-10 23:09:25,647 - INFO - Creating Training Dataset...
+2025-04-10 23:09:25,647 - INFO - Fitting StandardScaler on numerical features...
+2025-04-10 23:09:26,541 - INFO - Applied StandardScaler.
+2025-04-10 23:09:26,541 - INFO - Creating categorical mappings...
+2025-04-10 23:09:26,582 - INFO -   Mapped 'pitch_type' (17 unique values).
+2025-04-10 23:09:26,623 - INFO -   Mapped 'stand' (2 unique values).
+2025-04-10 23:09:26,663 - INFO -   Mapped 'p_throws' (2 unique values).
+2025-04-10 23:09:26,892 - INFO -   Mapped 'inning_topbot_numeric' (2 unique values).
+2025-04-10 23:09:26,939 - INFO - Applied mapping for 'pitch_type'.
+2025-04-10 23:09:26,975 - INFO - Applied mapping for 'stand'.
+2025-04-10 23:09:27,011 - INFO - Applied mapping for 'p_throws'.
+2025-04-10 23:09:27,262 - INFO - Applied mapping for 'inning_topbot_numeric'.
+2025-04-10 23:09:27,412 - INFO - Grouping data by at-bat and creating sequence indices...
+2025-04-10 23:09:43,986 - INFO - Created 1129031 sequences from 304302 at-bats (1129031 total pitches).
+2025-04-10 23:09:43,988 - INFO - Creating Validation Dataset...
+2025-04-10 23:09:43,988 - INFO - Using pre-fitted StandardScaler.
+2025-04-10 23:09:44,106 - INFO - Applied StandardScaler.
+2025-04-10 23:09:44,106 - INFO - Using pre-defined categorical mappings.
+2025-04-10 23:09:44,116 - INFO - Applied mapping for 'pitch_type'.
+2025-04-10 23:09:44,124 - INFO - Applied mapping for 'stand'.
+2025-04-10 23:09:44,132 - INFO - Applied mapping for 'p_throws'.
+2025-04-10 23:09:44,179 - INFO - Applied mapping for 'inning_topbot_numeric'.
+2025-04-10 23:09:44,203 - INFO - Grouping data by at-bat and creating sequence indices...
+2025-04-10 23:09:47,557 - INFO - Created 226181 sequences from 60908 at-bats (226181 total pitches).
+2025-04-10 23:09:47,558 - INFO - Creating DataLoaders with batch_size=128, num_workers=4...
+2025-04-10 23:09:47,558 - INFO - DataLoaders created.
+2025-04-10 23:11:46,906 - INFO - Starting training orchestration with caching...
+2025-04-10 23:11:46,906 - INFO - Using CUDA device.
+2025-04-10 23:11:46,906 - INFO - 
+--- Processing Year: 2022 ---
+2025-04-10 23:11:46,907 - INFO - Loading cached processed data for 2022 from dataset/processed_statcast_2022.parquet
+2025-04-10 23:11:47,160 - INFO - Loaded 754158 processed pitches from cache for 2022.
+2025-04-10 23:11:47,160 - INFO - 
+--- Processing Year: 2023 ---
+2025-04-10 23:11:47,160 - INFO - Loading cached processed data for 2023 from dataset/processed_statcast_2023.parquet
+2025-04-10 23:11:47,405 - INFO - Loaded 751775 processed pitches from cache for 2023.
+2025-04-10 23:11:47,405 - INFO - Concatenating processed data from all years...
+2025-04-10 23:11:47,560 - INFO - Total processed pitches combined: 1505933
+2025-04-10 23:11:47,560 - INFO - Final Numerical Features for Training: ['release_speed', 'release_pos_x', 'release_pos_z', 'release_extension', 'release_spin_rate', 'spin_axis', 'pfx_x', 'pfx_z', 'inning', 'outs_when_up', 'score_diff', 'balls', 'strikes', 'on_1b_flag', 'on_2b_flag', 'on_3b_flag']
+2025-04-10 23:11:47,560 - INFO - Final Categorical Features for Training: ['pitch_type', 'stand', 'p_throws', 'inning_topbot_numeric']
+2025-04-10 23:11:47,579 - INFO - Splitting combined data based on 5404 unique games.
+2025-04-10 23:11:48,084 - INFO - Data split: Train=1129031, Val=226181, Test=150721
+2025-04-10 23:11:48,084 - INFO - Creating Training Dataset...
+2025-04-10 23:11:48,084 - INFO - Fitting StandardScaler on numerical features...
+2025-04-10 23:11:48,961 - INFO - Applied StandardScaler.
+2025-04-10 23:11:48,961 - INFO - Creating categorical mappings...
+2025-04-10 23:11:49,003 - INFO -   Mapped 'pitch_type' (17 unique values).
+2025-04-10 23:11:49,042 - INFO -   Mapped 'stand' (2 unique values).
+2025-04-10 23:11:49,080 - INFO -   Mapped 'p_throws' (2 unique values).
+2025-04-10 23:11:49,304 - INFO -   Mapped 'inning_topbot_numeric' (2 unique values).
+2025-04-10 23:11:49,351 - INFO - Applied mapping for 'pitch_type'.
+2025-04-10 23:11:49,387 - INFO - Applied mapping for 'stand'.
+2025-04-10 23:11:49,423 - INFO - Applied mapping for 'p_throws'.
+2025-04-10 23:11:49,671 - INFO - Applied mapping for 'inning_topbot_numeric'.
+2025-04-10 23:11:49,822 - INFO - Grouping data by at-bat and creating sequence indices...
+2025-04-10 23:12:06,479 - INFO - Created 1129031 sequences from 304302 at-bats (1129031 total pitches).
+2025-04-10 23:12:06,481 - INFO - Creating Validation Dataset...
+2025-04-10 23:12:06,481 - INFO - Using pre-fitted StandardScaler.
+2025-04-10 23:12:06,600 - INFO - Applied StandardScaler.
+2025-04-10 23:12:06,600 - INFO - Using pre-defined categorical mappings.
+2025-04-10 23:12:06,610 - INFO - Applied mapping for 'pitch_type'.
+2025-04-10 23:12:06,618 - INFO - Applied mapping for 'stand'.
+2025-04-10 23:12:06,626 - INFO - Applied mapping for 'p_throws'.
+2025-04-10 23:12:06,675 - INFO - Applied mapping for 'inning_topbot_numeric'.
+2025-04-10 23:12:06,699 - INFO - Grouping data by at-bat and creating sequence indices...
+2025-04-10 23:12:09,700 - INFO - Created 226181 sequences from 60908 at-bats (226181 total pitches).
+2025-04-10 23:12:09,701 - INFO - Creating DataLoaders with batch_size=128, num_workers=4...
+2025-04-10 23:12:09,701 - INFO - DataLoaders created.
+2025-04-10 23:12:09,952 - INFO - Model initialized (801,949 params).
+2025-04-10 23:12:12,977 - INFO - 
+--- Epoch 1/5 ---
+2025-04-10 23:14:26,159 - INFO - Starting training orchestration with caching...
+2025-04-10 23:14:26,160 - INFO - Using CUDA device.
+2025-04-10 23:14:26,160 - INFO - 
+--- Processing Year: 2022 ---
+2025-04-10 23:14:26,160 - INFO - Loading cached processed data for 2022 from dataset/processed_statcast_2022.parquet
+2025-04-10 23:14:26,417 - INFO - Loaded 754158 processed pitches from cache for 2022.
+2025-04-10 23:14:26,417 - INFO - 
+--- Processing Year: 2023 ---
+2025-04-10 23:14:26,417 - INFO - Loading cached processed data for 2023 from dataset/processed_statcast_2023.parquet
+2025-04-10 23:14:26,672 - INFO - Loaded 751775 processed pitches from cache for 2023.
+2025-04-10 23:14:26,672 - INFO - Concatenating processed data from all years...
+2025-04-10 23:14:26,764 - INFO - Total processed pitches combined: 1505933
+2025-04-10 23:14:26,764 - INFO - Final Numerical Features for Training: ['release_speed', 'release_pos_x', 'release_pos_z', 'release_extension', 'release_spin_rate', 'spin_axis', 'pfx_x', 'pfx_z', 'inning', 'outs_when_up', 'score_diff', 'balls', 'strikes', 'on_1b_flag', 'on_2b_flag', 'on_3b_flag']
+2025-04-10 23:14:26,764 - INFO - Final Categorical Features for Training: ['pitch_type', 'stand', 'p_throws', 'inning_topbot_numeric']
+2025-04-10 23:14:26,778 - INFO - Splitting combined data based on 5404 unique games.
+2025-04-10 23:14:27,151 - INFO - Data split: Train=1129031, Val=226181, Test=150721
+2025-04-10 23:14:27,151 - INFO - Creating Training Dataset...
+2025-04-10 23:14:27,151 - INFO - Fitting StandardScaler on numerical features...
+2025-04-10 23:14:27,925 - INFO - Applied StandardScaler.
+2025-04-10 23:14:27,925 - INFO - Creating categorical mappings...
+2025-04-10 23:14:27,965 - INFO -   Mapped 'pitch_type' (17 unique values).
+2025-04-10 23:14:28,004 - INFO -   Mapped 'stand' (2 unique values).
+2025-04-10 23:14:28,043 - INFO -   Mapped 'p_throws' (2 unique values).
+2025-04-10 23:14:28,267 - INFO -   Mapped 'inning_topbot_numeric' (2 unique values).
+2025-04-10 23:14:28,314 - INFO - Applied mapping for 'pitch_type'.
+2025-04-10 23:14:28,349 - INFO - Applied mapping for 'stand'.
+2025-04-10 23:14:28,384 - INFO - Applied mapping for 'p_throws'.
+2025-04-10 23:14:28,632 - INFO - Applied mapping for 'inning_topbot_numeric'.
+2025-04-10 23:14:28,753 - INFO - Grouping data by at-bat and creating sequence indices...
+2025-04-10 23:14:45,637 - INFO - Created 1129031 sequences from 304302 at-bats (1129031 total pitches).
+2025-04-10 23:14:45,639 - INFO - Creating Validation Dataset...
+2025-04-10 23:14:45,639 - INFO - Using pre-fitted StandardScaler.
+2025-04-10 23:14:45,757 - INFO - Applied StandardScaler.
+2025-04-10 23:14:45,757 - INFO - Using pre-defined categorical mappings.
+2025-04-10 23:14:45,767 - INFO - Applied mapping for 'pitch_type'.
+2025-04-10 23:14:45,775 - INFO - Applied mapping for 'stand'.
+2025-04-10 23:14:45,783 - INFO - Applied mapping for 'p_throws'.
+2025-04-10 23:14:45,831 - INFO - Applied mapping for 'inning_topbot_numeric'.
+2025-04-10 23:14:45,854 - INFO - Grouping data by at-bat and creating sequence indices...
+2025-04-10 23:14:49,376 - INFO - Created 226181 sequences from 60908 at-bats (226181 total pitches).
+2025-04-10 23:14:49,377 - INFO - Creating DataLoaders with batch_size=128, num_workers=4...
+2025-04-10 23:14:49,377 - INFO - DataLoaders created.
+2025-04-10 23:14:49,406 - INFO - Model initialized (801,949 params).
+2025-04-10 23:14:49,406 - INFO - 
+--- Epoch 1/5 ---
