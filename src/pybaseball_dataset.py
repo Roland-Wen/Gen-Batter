@@ -18,7 +18,6 @@ import warnings
 
 CACHE_DIR = "dataset"
 
-# --- 1. Data Fetching ---
 def fetch_statcast_data_for_year(year: int, cache_dir: str = CACHE_DIR) -> pd.DataFrame:
     """
     Fetches pitch-by-pitch Statcast data for a given year.
@@ -82,7 +81,6 @@ def fetch_statcast_data_for_year(year: int, cache_dir: str = CACHE_DIR) -> pd.Da
                 if data_chunk is not None and not data_chunk.empty:
                     all_data.append(data_chunk)
                     logging.info(f"  Fetched {len(data_chunk)} pitches.")
-                # else: No need to log 'no data found' for every chunk
         except ValueError:
              logging.warning(f"  Value error (likely no games) for {start_str} to {end_str}.")
         except Exception as e:
@@ -106,14 +104,32 @@ def fetch_statcast_data_for_year(year: int, cache_dir: str = CACHE_DIR) -> pd.Da
 
     return final_df
 
-# --- 2. Data Preprocessing & Feature Engineering ---
-def preprocess_and_feature_engineer(raw_df: pd.DataFrame) -> pd.DataFrame:
+
+def preprocess_and_feature_engineer(raw_df: pd.DataFrame, year: int = -1, cache_dir: str = CACHE_DIR) -> pd.DataFrame:
     """
     Cleans raw Statcast data, engineers features (like target action),
     selects relevant columns, handles missing values, and identifies
     feature types (numerical, categorical). Excludes final pitch location.
     Adds unique at-bat identifiers if not present.
     """
+    processed_cache_file = os.path.join(cache_dir, f"processed_statcast_{year}.parquet")
+    current_year = datetime.now().year
+
+    # --- Cache Check ---
+    if os.path.exists(processed_cache_file):
+        try:
+            logging.info(f"Loading cached processed data for {year} from {processed_cache_file}")
+            df = pd.read_parquet(processed_cache_file)
+            logging.info(f"Loaded {len(df)} pitches from cache for {year}.")
+            # Basic check if loaded data looks reasonable (e.g., has expected columns)
+            if 'at_bat_id' in df.columns and 'target_action' in df.columns:
+                 return df
+            else:
+                 logging.warning(f"Cached file {processed_cache_file} seems incomplete or corrupted.")
+        except Exception as e:
+            logging.error(f"Error loading cached file {processed_cache_file}: {e}. Reprocessing.")
+
+    
     if raw_df.empty:
         logging.warning("Input DataFrame is empty. Returning empty DataFrame.")
         return pd.DataFrame()
@@ -121,13 +137,15 @@ def preprocess_and_feature_engineer(raw_df: pd.DataFrame) -> pd.DataFrame:
     logging.info(f"Preprocessing data. Initial shape: {raw_df.shape}")
     df = raw_df.copy()
 
-    # Ensure necessary base columns exist (add more as needed based on features below)
+    # Ensure necessary base columns exist
     # These are crucial for basic processing and target/feature creation
-    base_cols = ['description', 'events', 'launch_speed', 'launch_angle',
-                 'release_speed', 'release_pos_x', 'release_pos_z',
-                 'game_pk', 'at_bat_number', 'pitch_number', 'pitch_type',
-                 'inning', 'inning_topbot', 'outs_when_up', 'fld_score', 'bat_score',
-                 'balls', 'strikes', 'on_1b', 'on_2b', 'on_3b', 'stand', 'p_throws']
+    base_cols = ['release_pos_x', 'release_pos_z', 'effective_speed', 'spin_axis', 'release_spin_rate', 'pfx_x', 'pfx_z',
+                 'batter', 'pitcher', 'stand', 'p_throws',
+                 'balls', 'strikes', 
+                 'on_3b', 'on_2b', 'on_1b', 'outs_when_up', 'bat_score', 'fld_score',
+                 'inning', 'inning_topbot', 
+                 'description', 'launch_speed', 'launch_angle', 
+                 'game_pk', 'at_bat_number', 'pitch_number']
     missing_base = [col for col in base_cols if col not in df.columns]
     if missing_base:
         # Allow processing to continue but warn heavily, imputation might fail later
@@ -141,7 +159,7 @@ def preprocess_and_feature_engineer(raw_df: pd.DataFrame) -> pd.DataFrame:
     # This list might need tuning based on data exploration
     valid_descriptions = [
         'called_strike', 'ball', 'swinging_strike',
-        'swinging_strike_blocked', 'foul', 'foul_tip', 'foul_bunt',
+        'swinging_strike_blocked', 'foul', 'foul_tip', 'blocked_ball',
         'hit_into_play'
         # Excludes pitchouts, intentional balls/walks, catcher interference etc.
     ]
@@ -158,9 +176,9 @@ def preprocess_and_feature_engineer(raw_df: pd.DataFrame) -> pd.DataFrame:
 
     # 2. Define Target Action (Numerical mapping: 0:Take, 1:S&M, 2:Foul, 3:BIP)
     action_map = {
-        'ball': 0, 'called_strike': 0,
+        'ball': 0, 'called_strike': 0, 'blocked_ball': 0,
         'swinging_strike': 1, 'swinging_strike_blocked': 1,
-        'foul': 2, 'foul_tip': 2, 'foul_bunt': 2,
+        'foul': 2, 'foul_tip': 2,
         'hit_into_play': 3
     }
 
@@ -185,57 +203,47 @@ def preprocess_and_feature_engineer(raw_df: pd.DataFrame) -> pd.DataFrame:
     # Only create targets if source columns exist
     if 'launch_speed' in df.columns:
         df['target_ev'] = df['launch_speed'].where(df['target_action'] == bip_action_index, 0.0)
-        df['target_ev'].fillna(0.0, inplace=True) # Fill remaining NaNs (e.g., BIP w/ missing EV)
+        df.fillna({'target_ev': 0.0}, inplace=True) # Fill remaining NaNs (e.g., BIP w/ missing EV)
     else:
         logging.warning("Column 'launch_speed' not found. Creating 'target_ev' as all zeros.")
         df['target_ev'] = 0.0
 
     if 'launch_angle' in df.columns:
         df['target_la'] = df['launch_angle'].where(df['target_action'] == bip_action_index, 0.0)
-        df['target_la'].fillna(0.0, inplace=True) # Fill remaining NaNs (e.g., BIP w/ missing LA)
+        df.fillna({'target_la': 0.0}, inplace=True) # Fill remaining NaNs (e.g., BIP w/ missing LA)
     else:
         logging.warning("Column 'launch_angle' not found. Creating 'target_la' as all zeros.")
         df['target_la'] = 0.0
     logging.info("Target variables created/processed.")
 
 
-    # 4. Feature Selection & Engineering
-    # Game State
-    if 'inning_topbot' in df.columns:
-        df['inning_topbot_numeric'] = df['inning_topbot'].map({'Top': 0, 'Bot': 1}).fillna(-1).astype(int) # Use -1 for rare unknowns
-    else:
-        logging.warning("Column 'inning_topbot' not found. Feature 'inning_topbot_numeric' will be missing.")
-        df['inning_topbot_numeric'] = -1 # Assign default if missing
+    # 4. Create categorical feature mappings
+    # pitcher / batter handeness
+    df['stand'] = df['stand'].map({'L':0, 'R':1}).fillna(-1).astype(int)
+    df['p_throws'] = df['p_throws'].map({'L':0, 'R':1}).fillna(-1).astype(int)
+    
+    # balls / strikes
+    df['balls']   = df['balls'].astype(int)
+    df['strikes'] = df['strikes'].astype(int)
 
-    if 'fld_score' in df.columns and 'bat_score' in df.columns:
-       df['score_diff'] = df['fld_score'] - df['bat_score']
-    else:
-       logging.warning("Columns 'fld_score' or 'bat_score' not found. 'score_diff' will be missing.")
-       df['score_diff'] = 0 # Assign default if missing
-
-    # Runner presence (convert player IDs/NaNs to binary 0/1)
-    for col in ['on_1b', 'on_2b', 'on_3b']:
-        if col in df.columns:
-           # Check if data contains player IDs (often floats/ints) or just NaNs
-           # Convert non-NaN to 1 (base occupied), NaN to 0 (base empty)
-           df[col+'_flag'] = df[col].notna().astype(int)
-        else:
-           logging.warning(f"Column '{col}' not found. Creating '{col}_flag' as all zeros.")
-           df[col+'_flag'] = 0
-
+    # game state
+    df['on_1b'] = df['on_1b'].notna().astype(int)
+    df['on_2b'] = df['on_1b'].notna().astype(int)
+    df['on_3b'] = df['on_1b'].notna().astype(int)
+    df['inning'] = df['inning'].astype(int)
+    df['inning_topbot'] = df['inning_topbot'].map({'Top': 0, 'Bot': 1}).fillna(-1).astype(int)
+    df['score_diff'] = df['bat_score'] - df['fld_score']
 
     # Define feature lists based on available columns and engineered features
     numerical_features_base = [
-        'release_speed', 'release_pos_x', 'release_pos_z', 'release_extension',
-        'release_spin_rate', 'spin_axis', 'pfx_x', 'pfx_z',
-        'inning', 'outs_when_up', 'score_diff', 'balls', 'strikes'
+        'release_pos_x', 'release_pos_z', 'pfx_x', 'pfx_z', 'release_spin_rate', 'spin_axis',
+        'score_diff'
     ]
-    runner_features = ['on_1b_flag', 'on_2b_flag', 'on_3b_flag']
+    runner_features = ['on_1b', 'on_2b', 'on_3b']
     categorical_features_base = [
-        'pitch_type', # Needs handling NaNs/mapping later
-        'stand',      # Needs mapping
-        'p_throws',   # Needs mapping
-        'inning_topbot_numeric' # Already mapped
+        'batter', 'pitcher', # NOT categorized YET, need data from ALL YEARS
+        'stand', 'p_throws',
+        'balls', 'strikes', 'outs_when_up', 'inning', 'inning_topbot'
     ]
 
     # Filter lists based on actual columns present in df
@@ -263,38 +271,45 @@ def preprocess_and_feature_engineer(raw_df: pd.DataFrame) -> pd.DataFrame:
     for col in numerical_features:
         if df[col].isnull().any():
             median_val = df[col].median()
-            df[col].fillna(median_val, inplace=True)
+            df.fillna({col: median_val}, inplace=True)
             logging.info(f"Imputed NaNs in numerical feature '{col}' with median ({median_val:.2f}).")
 
-    # Handle missing/problematic categorical features
-    if 'pitch_type' in categorical_features:
-        # Convert to string first to handle mixed types if any, replace NaNs and 'nan' strings
-        df['pitch_type'] = df['pitch_type'].astype(str).fillna('UN').replace('nan', 'UN')
-
-    for col in ['stand', 'p_throws']:
-        if col in categorical_features:
-            if df[col].isnull().any():
-                # Ensure string type before filling
-                df[col] = df[col].astype(str).fillna('Unknown').replace('nan', 'Unknown')
-                logging.info(f"Filled NaNs in categorical feature '{col}' with 'Unknown'.")
-
-
+    
     # 6. Create Unique At-Bat ID (robustly handles types)
     df['at_bat_id'] = df['game_pk'].astype(str) + '_' + df['at_bat_number'].astype(str)
 
-
+    
     # 7. Sort data for sequencing (Crucial!)
     # Ensure pitch_number is numeric for correct sorting
     df['pitch_number'] = pd.to_numeric(df['pitch_number'], errors='coerce')
     df.dropna(subset=['pitch_number'], inplace=True) # Drop if pitch number is invalid
     df['pitch_number'] = df['pitch_number'].astype(int)
 
-    df.sort_values(by=['at_bat_id', 'pitch_number'], inplace=True)
+    df.sort_values(by=['game_pk', 'at_bat_number', 'pitch_number'], inplace=True)
     df.reset_index(drop=True, inplace=True) # Good practice after sorting
 
     logging.info(f"Preprocessing complete. Final shape: {df.shape}")
+    logging.info("Remember to categorize pitcher and batter!!!")
     # Log feature lists identified for clarity downstream
     logging.info(f"Final Numerical Features: {numerical_features}")
     logging.info(f"Final Categorical Features: {categorical_features}")
 
-    return df
+    try:
+        logging.info(f"Saving processed data for {year} to {processed_cache_file}")
+        df.to_parquet(processed_cache_file, index=False)
+    except Exception as e:
+        logging.error(f"Error saving processed data cache file {processed_cache_file}: {e}")
+    
+    return df # Remember to categorize pitcher and batter!!!
+
+def categorize_pitcher_batter(df: pd.DataFrame):
+    '''Categorize pitcher and batter, return cat codes'''
+    cat_series = df['batter'].astype('category')
+    df['batter'] = cat_series.cat.codes
+    batter_categories = cat_series.cat.categories
+    
+    cat_series = df['pitcher'].astype('category')
+    df['pitcher'] = cat_series.cat.codes
+    pitcher_categories = cat_series.cat.categories
+
+    return df, batter_categories, pitcher_categories
